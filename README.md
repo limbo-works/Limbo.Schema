@@ -1,6 +1,6 @@
 # Limbo Schema
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/limbo-works/Limbo.Schema/blob/v17/main/LICENSE.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/limbo-works/Limbo.Schema/blob/v1/main/LICENSE.md)
 [![NuGet](https://img.shields.io/nuget/v/Limbo.Schema.svg)](https://www.nuget.org/packages/Limbo.Schema)
 [![NuGet](https://img.shields.io/nuget/dt/Limbo.Schema.svg)](https://www.nuget.org/packages/Limbo.Schema)
 [![Limbo.Schema at packages.limbo.works](https://img.shields.io/badge/limbo-packages-blue)](https://packages.limbo.works/limbo.schema/)
@@ -10,7 +10,7 @@
 <table>
   <tr>
     <td><strong>License:</strong></td>
-    <td><a href="https://github.com/limbo-works/Limbo.Schema/blob/v17/main/LICENSE.md"><strong>MIT License</strong></a></td>
+    <td><a href="https://github.com/limbo-works/Limbo.Schema/blob/v1/main/LICENSE.md"><strong>MIT License</strong></a></td>
   </tr>
   <tr>
     <td><strong>Target Framework:</strong></td>
