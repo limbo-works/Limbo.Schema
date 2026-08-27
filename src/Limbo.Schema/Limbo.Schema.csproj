@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0-alpha000</VersionPrefix>
+    <VersionSuffix Condition="'$(Configuration)'=='Debug'">build$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmm`))</VersionSuffix>
+    <Authors>Anders Bjerner</Authors>
+    <Company>Limbo</Company>
+    <Description>Library with .NET models for representing and serializing Schema.org structured data.</Description>
+    <Copyright>Copyright © $([System.DateTime]::UtcNow.ToString(`yyyy`))</Copyright>
+  </PropertyGroup>
+
+  <!-- Information for the NuGet package -->
+  <PropertyGroup>
+    <PackageId>Limbo.Schema</PackageId>
+    <PackageTags>Skybrud, Limbo, Schema, Schema.org, JSON, JSON-LD, Structured-Data</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://packages.limbo.works/limbo.schema/</PackageProjectUrl>
+    <PackageIcon>Limbo.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/limbo-works/Limbo.Schema</RepositoryUrl>
+  </PropertyGroup>
+
+  <!-- Include additional metadata in the assembly -->
+  <ItemGroup>
+    <AssemblyMetadata Include="Authors" Value="$(Authors)" />
+    <AssemblyMetadata Include="PackageProjectUrl" Value="$(PackageProjectUrl)" />
+    <AssemblyMetadata Include="DocumentationUrl" Value="https://packages.limbo.works/limbo.schema/docs/" />
+    <AssemblyMetadata Include="NuGetUrl" Value="https://packages.limbo.works/limbo.schema/docs/" />
+    <AssemblyMetadata Include="BuildDate" Value="$([System.DateTime]::UtcNow.ToString(`yyyyMMddHHmmss`))" />
+  </ItemGroup>
+
+  <!-- Ignore vulnerabilities from transient dependencies -->
+  <PropertyGroup>
+    <NuGetAuditMode>direct</NuGetAuditMode>
+  </PropertyGroup>
+
+  <!-- Include NuGet dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Skybrud.Essentials" Version="1.1.68" />
+  </ItemGroup>
+
+  <!-- Include package icon for NuGet -->
+  <ItemGroup>
+    <Content Include="../build/Limbo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!-- Generate XML documentation -->
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
