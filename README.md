@@ -15,7 +15,7 @@
   <tr>
     <td><strong>Target Framework:</strong></td>
     <td>
-      .NET 10
+      .NET 8 and .NET 10
     </td>
   </tr>
 </table>
